@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+/* root is the place where we declare global css variables */
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+/* We use the universal selector to reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    /* https://www.w3schools.com/css/css3_box-sizing.asp */
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--pale-blue);
+    background-image: url(./images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 16px;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+.card {
+    width: 450px;
+    background-color: white;
+    color: var(--desaturated-blue);
+    border-radius: 20px;
+    /* hero-image is overflowing and masks rounded corners at the top of the card*/
+    overflow: hidden;
+}
+
+.title {
+    color: var(--dark-blue);
+    font-weight: 900;
+    font-size: 32px;
+}
+
+.hero-img {
+    /* the image will have the width of its parent = 450px */
+    width: 100%;
+}
+
+.container {
+    padding: 30px;
+}
+
+/* selects all elements inside of this container */
+.container>* {
+    /* 1st margin value is for top&bottom, 2nd one is for left&right */
+    margin: 13px 0;
+}
+
+.order-description {
+    line-height: 25px;
+}
+
+.proceed-button {
+    background-color: var(--bright-blue);
+    padding: 1rem 0;
+    color: white;
+    box-shadow: 0 20px 30px -8px rgb(197 189 245);
+    width: 100%;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 0.9rem;
+    border-radius: 12px;
+}
+
+.proceed-button:hover {
+    opacity: 0.8;
+}
+
+.cancel-button {
+    background-color: white;
+    color: var(--desaturated-blue);
+    border: none;
+    margin-top: 22px;
+    width: 100%;
+    font-weight: 700;
+    font-size: 0.9rem;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.cancel-button:hover {
+    color: black;
+}
