@@ -33,6 +33,7 @@ body {
     border-radius: 20px;
     /* hero-image is overflowing and masks rounded corners at the top of the card*/
     overflow: hidden;
+    margin: 50px auto;
 }
 
 .title {
@@ -48,9 +49,14 @@ body {
 
 .container {
     padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 18px;
 }
 
-/* selects all elements inside of this container */
+/* select all elements inside of this container */
 .container>* {
     /* 1st margin value is for top&bottom, 2nd one is for left&right */
     margin: 13px 0;
@@ -84,6 +90,11 @@ body {
 
 .plan-container strong {
     color: var(--dark-blue);
+}
+
+.plan-description {
+    line-height: 20px;
+    margin-right: 75px;
 }
 
 /* let's define the properties common to our two buttons  */
